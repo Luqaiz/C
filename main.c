@@ -1,63 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define MAX 3
+
 
 int main()
 {
-    int numero;
-    char respuesta;
-    int cantidadPar = 0;
-    int cantidadImpar = 0;
-    int acumuladorImpar = 0;
-    float contador = 0;
-    float sumaNumeros = 0;
-    float promedio;
-    int numMax;
+    int legajo [MAX];
+    float salario [MAX];
+    float salarioAux;
+    int edad [MAX];
+    int i;
 
-        do
-        {
-            printf ("Ingrese un numero: ");
-            scanf ("%d", &numero);
-                while (numero < 0)
-                {
-                    printf ("ingrese un numero positivo: ");
-                    scanf ("%d", &numero);
-                }
-            if (numero > 0)
-            {
-                sumaNumeros = sumaNumeros + numero;
-            }
-            if (numero%2 == 0)
-                {
-                    cantidadPar++;
-                }
-                else
-                    {
-                        cantidadImpar++;
-                        acumuladorImpar = acumuladorImpar + numero;
-                    }
-            if (contador == 0)
-            {
-                numMax = numero;
-            }
-            else
-            {
-                if (numero > numMax)
-                    numMax = numero;
-            }
+    for (i=0 ; i<MAX ; i++)
+    {
+        printf ("Ingrese un numero de legajo: ");
+        scanf ("%d", &legajo[i]);
+
+        printf ("Ingrese un salario: ");
+        scanf ("%f", &salarioAux);
+
+        printf ("ingrese una edad: ");
+        scanf ("%d", &edad[i]);
+
+        salario [i] = salarioAux;
+
+    }
+        system ("cls");
+
+    printf("\n\n Legajo\tEdad\tSalario");
 
 
-            contador++;
-            printf ("desea contiunar?" );
-            fflush (stdin);
-            scanf ("%c", &respuesta);
-        }while (respuesta != 'n');
 
-
-    promedio = sumaNumeros / contador;
-
-    printf ("la cantidad de numeros par es %d \n", cantidadPar);
-    printf ("la cantidad de numeros impar es %d \n", cantidadImpar);
-    printf ("la sumatoria de los numeros impar es %d \n", acumuladorImpar);
-    printf ("el promedio de todos los numeros es %.2f \n", promedio);
-    printf ("el numero maximo es %d \n", numMax);
-
+    for (i=0 ; i<MAX ; i++)
+    {
+        printf ("\n %d\t%d\t%f \n", legajo[i],edad[i],salario[i]);
+    }
+    return 0;
+}
