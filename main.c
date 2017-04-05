@@ -10,6 +10,7 @@ int main()
     float salarioAux;
     int edad [MAX];
     int i;
+    int mayor;
 
     for (i=0 ; i<MAX ; i++)
     {
@@ -34,6 +35,16 @@ int main()
     for (i=0 ; i<MAX ; i++)
     {
         printf ("\n %d\t%d\t%f \n", legajo[i],edad[i],salario[i]);
+
+        if (i == 0 || salario[i] > mayor)
+        {
+            mayor = salario [i];
+        }
+
     }
+
+        printf ("el salario mayor es %d: ", mayor);
+
+
     return 0;
 }
