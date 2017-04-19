@@ -3,89 +3,52 @@
 
 typedef struct
 {
-    int dia;
-    int mes;
-    int anio;
-
-}eFecha;
-
-typedef struct
-{
+    char nombre[50];
+    char apellido[50];
     int legajo;
-    char nombre[20];
-    char apellido[30];
-    float promedio;
-    eFecha fnac;
+}ePersona;
 
-}eAlumno;
+void mostrarPersona (ePersona);
 
-void mostrarAlumno (eAlumno);
-void mostrarCurso (curso, int)
-
-int main ()
+int main()
 {
-    /*eAlumno unAlumno;*/
-    eAlumno curso [] = {{1111,"Juan","Perez",7,{4,11,1995}},{2222,"Jorge","Suarez",8.5,{12,8,1996}},{3333,"Roberto","Pepazo",8,{4,4,1998}}}; /*= {827,"Juan","Perez",9,{17, 4, 2017}};*/
+
+    ePersona datos [3];
     int i;
 
-    printf ("Datos de unAlumno:\n\n");
+    printf ("Datos de las personas:\n\n");
+
     for (i=0 ; i<3 ; i++)
     {
-        mostrarAlumno(curso[i]);
+        mostrarPersona(datos[i]);
     }
 
-    /*printf("Ingrese un legajo: ");
-    scanf ("%d", &unAlumno.legajo);
+    system("cls");
 
-    printf("Ingrese nombre: ");
-    fflush(stdin);
-    gets(unAlumno.nombre);
-
-    printf("Ingrese apellido: ");
-    fflush(stdin);
-    scanf("%s", unAlumno.apellido);
-
-    printf("Ingrese promedio: ");
-    scanf("%f", &unAlumno.promedio);
-
-    printf("Ingrese dia de nacimiento: ");
-    scanf("%d", &unAlumno.fnac.dia);
-
-    printf("Ingrese mes de nacimiento: ");
-    scanf("%d", &unAlumno.fnac.mes);
-
-    printf("Ingrese anio de nacimiento: ");
-    scanf("%d", &unAlumno.fnac.anio);
-
-
-    printf ("Datos de unAlumno:\n\n");
-    mostrarAlumno(unAlumno);*/
-
-    /*unAlumno.legajo = 827;
-    strcpy(unAlumno.nombre, "Juan");
-    strcpy(unAlumno.apellido, "Perez");
-    unAlumno.promedio = 7;*/
-
-
-
-    return (0);
+    return 0;
 }
-
-void mostrarAlumno (eAlumno alumno)
-{
-    printf("Datos del alumno\n\n");
-    printf("Legajo: %d\n" ,alumno.legajo);
-    printf("Nombre %s %s\n" ,alumno.nombre, alumno.apellido);
-    printf("Promedio: %.2f\n", alumno.promedio);
-    printf("Fecha Nacimiento: %d/%d/%d\n\n", alumno.fnac.dia, alumno.fnac.mes, alumno.fnac.anio);
-}
-
-void mostrarCurso (curso[3], int cantidad)
-{
-    int i;
-
-    for (i=0 ; i<cantidad ; i++)
+    void mostrarPersona (ePersona datos)
     {
-        mostrarAlumno(curso[i]);
+        printf ("Datos de la persona: \n\n");
+        printf ("El nombre es: %s %s\n", datos.nombre, datos.apellido);
+        printf ("El numero de legajo es %d\n",datos.legajo);
+
     }
-}
+
+      /*for (i=0 ; i<5 ;i++)
+    {
+
+    printf ("Ingrese un nombre: ");
+    fflush (stdin);
+    gets (alumno.nombre);
+
+    printf("Ingrese un apellido: ");
+    fflush(stdin);
+    gets (alumno.apellido);
+
+    printf("ingrese un numero de legajo: ");
+    scanf ("%d", &alumno.legajo);
+
+    }*/
+
+    /*printf("los datos son: %s \n %s \n %d",datos.alumno,datos.apellido,datos.legajo);*/
