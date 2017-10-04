@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1507087957 source:c:\users\lucas\desktop\tareaslab1\modelo de parcial\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	"funciones.h"
+
+1507087144 c:\users\lucas\desktop\tareaslab1\modelo de parcial\funciones.h
+
+1507088013 source:c:\users\lucas\desktop\tareaslab1\modelo de parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	"funciones.h"
+
